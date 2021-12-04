@@ -20,7 +20,7 @@ done
 
 # Create the admin user
 echo "=> Creating admin user with a password in MongoDB"
-mongo admin --eval "db.createUser({user: '$MONGODB_ADMIN_USER', pwd: '$MONGODB_ADMIN_PASS', roles:[{role:'root',db:'admin'}]});"
+mongo admin --eval "db.createUser({username: '$MONGODB_ADMIN_USER', password: '$MONGODB_ADMIN_PASS', role:'SUPERADMIN', employmentStatus:'ACTIVE', email: 'email@email.com', firstname: 'firstname', lastname: lastname''});"
 
 sleep 3
 
