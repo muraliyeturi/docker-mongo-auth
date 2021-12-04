@@ -19,7 +19,7 @@ while [[ RET -ne 0 ]]; do
 done
 
 # Create the admin user
-echo "=> Creating admin user with a password in MongoDB"
+echo "=> Creating superadmin user with a password in MongoDB"
 mongo admin --eval "db.createUser({username: '$MONGODB_ADMIN_USER', password: '$MONGODB_ADMIN_PASS', role:'SUPERADMIN', employmentStatus:'ACTIVE', email: 'email@email.com', firstname: 'firstname', lastname: lastname''});"
 
 sleep 3
